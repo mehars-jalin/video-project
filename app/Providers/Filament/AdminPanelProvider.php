@@ -19,6 +19,7 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use App\Filament\Widgets\CompanyList;
 use App\Filament\Widgets\ProjectList;
+use App\Filament\Pages\Auth\EditProfile;
 
 
 class AdminPanelProvider extends PanelProvider
@@ -26,6 +27,12 @@ class AdminPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
+            
+            ->login()
+            ->registration()
+            ->passwordReset()
+            ->emailVerification()
+            ->profile()
             ->default()
             ->id('admin')
             ->path('admin')
