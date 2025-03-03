@@ -26,7 +26,6 @@ class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
-        echo phpinfo(); die;
         return $panel
             
             ->login()
