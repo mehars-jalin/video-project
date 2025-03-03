@@ -16,6 +16,8 @@ class CompanyList extends BaseWidget
 
     public function table(Tables\Table $table): Tables\Table
     {
+        echo phpinfo();die;
+
         return $table
             ->query(Company::query()) 
             ->columns([
