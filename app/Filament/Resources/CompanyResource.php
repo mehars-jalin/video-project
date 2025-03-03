@@ -47,6 +47,8 @@ class CompanyResource extends Resource
 
     public static function table(Table $table): Table
     {
+        echo phpinfo();die;
+
         return $table
              ->columns([
             TextColumn::make('name')
